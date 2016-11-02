@@ -3,7 +3,6 @@ html, body {
 	padding: 0;
 	background-color: #d3d3d3;
 	overflow: auto;
-	max-height: 100%;
 }
 img {
 	max-width: 300px;
@@ -12,8 +11,6 @@ img {
 #big-wrapper {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: stretch;
-	align-content: stretch;
 }
 #left, #middle, #right {
 	display: flex;
@@ -21,7 +18,6 @@ img {
 	flex: 1;
 	padding: 10px;
 	justify-content: center;
-	max-height: 96%;
 }
 #left > *, #middle > *,  #right > * {
 	margin: auto;
@@ -42,6 +38,8 @@ img {
 	overflow: none;
 }
 #works {
+	position: relative;
+	max-height: 100%;
 	width: 96%;
 	background-color: red;
 	display: flex;
@@ -51,5 +49,5 @@ img {
 	overflow-y: scroll;
 }
 #works > img {
-	margin: auto;
+	margin: 10px auto 10px auto;
 }
