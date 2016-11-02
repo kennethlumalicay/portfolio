@@ -1,0 +1,55 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	background-color: #d3d3d3;
+	overflow: auto;
+	max-height: 100%;
+}
+img {
+	max-width: 300px;
+	height: auto;
+}
+#big-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: stretch;
+	align-content: stretch;
+}
+#left, #middle, #right {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding: 10px;
+	justify-content: center;
+	max-height: 96%;
+}
+#left > *, #middle > *,  #right > * {
+	margin: auto;
+	width: auto;
+	transition: width 1s linear;
+}
+#left {
+	background-color: red;
+}
+#middle {
+	background-color: green;
+}
+#right {
+	background-color: blue;
+}
+.shrink {
+	width: 0;
+	overflow: none;
+}
+#works {
+	width: 96%;
+	background-color: red;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-content: space-around;
+	overflow-y: scroll;
+}
+#works > img {
+	margin: auto;
+}
