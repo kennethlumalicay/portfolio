@@ -84,22 +84,22 @@ img {
 	overflow-y: auto;
 }
 .wrapper {
-	padding: 10px;
+	padding: 0px;
 }
 .rewidth {
 	width: auto;
 }
 .views {
-	min-height: 97%;
-	max-height: 97%;
+	min-height: 100%;
+	max-height: 100%;
 }
 .normal-view {
-	width: 38%;
-	max-width: 38%;
+	width: 40%;
+	max-width: 40%;
 }
 .large-view {
-	width: 77%;
-	max-width: 77%;
+	width: 80%;
+	max-width: 80%;
 }
 .no-squish {
 	min-width: 330px;
@@ -115,9 +115,6 @@ img {
 .place-left {
 	right: 80%;
 	left: 0;
-}
-.fa {
-	color: rgba(0,0,0,0.8);
 }
 #welcome {
 	position: fixed;
@@ -164,14 +161,48 @@ img {
 	margin: auto;
 	width: 100%;
 }
-#left-aboutme > p {
+#left-aboutme > * {
 	margin: auto;
 	max-width: 600px;
 }
+#left-aboutme > div {
+	text-shadow: none;
+	background-color: rgba(255,255,255, 0.8);
+	margin: 0 auto 10px auto;
+	padding: 3px;
+	text-align: center;
+}
+#left-aboutme > p {
+	padding: 10px;
+}
+#left-aboutme > div > * > span {
+    background-image: url("./img/left-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+#left-aboutme > div > h3 {
+	margin: 0;
+	font-size: 2em;
+	font-weight: bold;
+	color: rgba(255,255,255, 0.7);
+}
+#left-aboutme > div > h4 {
+	margin: 0 auto 0 auto;
+	font-size: 1.2em;
+	font-weight: normal;
+	color: rgba(255,255,255, 0.6);
+}
+
 #left-contactme {
 	margin: auto;
 	text-align: center;
 	font-size: 3em;
+}
+.fa {
+	color: rgba(255,255,255,0.8);
 }
 #middle {
 	width: 20%;
@@ -223,8 +254,13 @@ img {
     background-size: cover;
 	right: 0;
 }
+#right > h1 {
+	font-size: 1.4em;
+	margin: 10px auto 0 auto;
+}
 #works {
-	width: 100%;
+	margin: 10px;
+	width: 97%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
