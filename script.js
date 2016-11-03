@@ -1,9 +1,3 @@
-/*
-	fix javascript.
-	Don't use jquery animations.
-	use Classes only if possible.
-*/
-
 $(document).ready(function () {
 	// var initialize
 	var wctext = $("#wctext");
@@ -29,8 +23,7 @@ $(document).ready(function () {
 	setTimeout(function() {
 		welcome.addClass("nodisplay").removeClass("flex");
 	}, 3500);
-	
-	// click button
+
 	function click(btn) {
 		var shrink = (btn == aboutmebtn ? right : left);
 		var grow = (btn == aboutmebtn ? left : right);
@@ -45,10 +38,13 @@ $(document).ready(function () {
 		fade.addClass("fade").removeClass("invert").prop("disabled", true);
 		show.addClass("invert").prop("disabled", false);
 	}
-	
+
+	// click about me
 	aboutmebtn.on("click", function() {
 		click(aboutmebtn);
 	});
+
+	// click works
 	worksbtn.on("click", function() {
 		click(worksbtn);
 	});
