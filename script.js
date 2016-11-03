@@ -35,8 +35,8 @@ $(document).ready(function () {
 		grow.addClass("overflow rewidth large-view seen").removeClass("shrink fade");
 		body.addClass("bodybg");
 		logo.addClass("invert");
-		fade.addClass("fade").removeClass("invert").prop("disabled", true);
-		show.addClass("invert").prop("disabled", false);
+		fade.addClass("fade").removeClass("invert seen").prop("disabled", true);
+		show.addClass("invert seen").prop("disabled", false);
 	}
 
 	// click about me
@@ -56,7 +56,7 @@ $(document).ready(function () {
 		middle.addClass("place-mid").removeClass("place-right place-left");
 		body.removeClass("bodybg");
 		logo.removeClass("invert");
-		worksbtn.removeClass("invert fade").prop("disabled", false);
-		aboutmebtn.removeClass("invert fade").prop("disabled", false);
+		worksbtn.removeClass("invert fade").addClass("seen").prop("disabled", false);
+		aboutmebtn.removeClass("invert fade").addClass("seen").prop("disabled", false);
 	});
 });
