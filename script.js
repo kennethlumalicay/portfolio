@@ -1,50 +1,66 @@
+/*
+	fix javascript.
+	Don't use jquery animations.
+	use Classes only if possible.
+*/
+
 $(document).ready(function () {
-	function welcome() {
-		var wctext = 'System.out.print("Welcome!");';
-		$("#wctext").html(wctext).css("opacity","1");
+	// var initialize
+	var wctext = $("#wctext");
+	var welcome = $("#welcome");
+	var left = $("#left");
+	var right = $("#right");
+	var middle = $("#middle");
+	var aboutmebtn = $("#aboutme-btn");
+	var worksbtn = $("#works-btn");
+	var logo = $("#logo");
+	var logobtn = $("#logo-btn");
+	var body = $("body");
+
+	// welcome display
+	function welcomedp() {
+		var text = 'System.out.print("Welcome!");';
+		wctext.html(text).addClass("seen").removeClass("fade");
 	};
-	welcome();
+	welcomedp();
 	setTimeout(function() {
-		$("#welcome").css({
-			"opacity":"0",
-			"top":"50%",
-			"bottom":"50%",
-			"left":"50%",
-			"right":"50%",
-		});
+		welcome.addClass("closewelcome").removeClass("initwelcome");
 	}, 2500);
 	setTimeout(function() {
-		$("#welcome").css("display","none");
+		welcome.addClass("nodisplay").removeClass("flex");
 	}, 3500);
-	$("#aboutme-btn").on("click", function() {
-		$("#right").fadeTo(200, 0, function() {
-			$("#right").addClass("shrink").removeClass("overflow rewidth normal-view large-view");
-			$("#middle").addClass("place-right").removeClass("place-mid place-left");
-			$("#left").fadeTo(200, 1).addClass("overflow rewidth large-view").removeClass("shrink");
-		});
-		$("body").css("background-color", "#e6e6e6");
-		$("#logo").css("filter","invert(100%)");
-		$("#aboutme-btn").css("opacity", "0").prop("disabled", true);
-		$("#works-btn").css({"opacity":"1", "filter":"invert(100%)"}).prop("disabled", false);
+	
+	// click button
+	function click(btn) {
+		var shrink = (btn == aboutmebtn ? right : left);
+		var grow = (btn == aboutmebtn ? left : right);
+		var fade = (btn == aboutmebtn ? aboutmebtn : worksbtn);
+		var show = (btn == aboutmebtn ? worksbtn : aboutmebtn);
+		var midplace = (btn == aboutmebtn ? "place-right" : "place-left");
+		shrink.addClass("shrink fade").removeClass("overflow rewidth normal-view large-view seen");
+		middle.removeClass("place-mid place-left place-right").addClass(midplace);
+		grow.addClass("overflow rewidth large-view seen").removeClass("shrink fade");
+		body.addClass("bodybg");
+		logo.addClass("invert");
+		fade.addClass("fade").removeClass("invert").prop("disabled", true);
+		show.addClass("invert").prop("disabled", false);
+	}
+	
+	aboutmebtn.on("click", function() {
+		click(aboutmebtn);
 	});
-	$("#works-btn").on("click", function() {
-		$("#left").fadeTo(200, 0, function() {
-			$("#left").addClass("shrink").removeClass("overflow rewidth normal-view large-view");
-			$("#middle").addClass("place-left").removeClass("place-mid place-right");
-			$("#right").fadeTo(200, 1).addClass("overflow rewidth large-view").removeClass("shrink");
-		});
-		$("body").css("background-color", "#e6e6e6");
-		$("#logo").css("filter","invert(100%)");
-		$("#works-btn").css("opacity", "0").prop("disabled", true);
-		$("#aboutme-btn").css({"opacity":"1", "filter":"invert(100%)"}).prop("disabled", false);
+	worksbtn.on("click", function() {
+		click(worksbtn);
 	});
-	$("#logo-btn").on("click", function() {
-		$("#left").fadeTo(200, 1).addClass("overflow rewidth normal-view").removeClass("shrink large-view");
-		$("#right").fadeTo(200, 1).addClass("overflow rewidth normal-view").removeClass("shrink large-view");
-		$("#middle").addClass("place-mid").removeClass("place-right place-left");
-		$("body").css("background-color", "black");
-		$("#logo").css("filter","none");
-		$("#works-btn").css({"opacity":"1", "filter":"none"}).prop("disabled", false);
-		$("#aboutme-btn").css({"opacity":"1", "filter":"none"}).prop("disabled", false);
+
+	// click logo
+	logobtn.on("click", function() {
+		left.addClass("overflow rewidth normal-view seen").removeClass("shrink large-view fade");
+		right.addClass("overflow rewidth normal-view seen").removeClass("shrink large-view fade");
+		middle.addClass("place-mid").removeClass("place-right place-left");
+		body.removeClass("bodybg");
+		logo.removeClass("invert");
+		worksbtn.removeClass("invert fade").prop("disabled", false);
+		aboutmebtn.removeClass("invert fade").prop("disabled", false);
 	});
 });
