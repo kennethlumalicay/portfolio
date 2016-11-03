@@ -24,6 +24,7 @@
 }
 html, body {
 	font-family: junction_regularregular;
+	text-shadow: -1px 1px 3px rgba(0,0,0,0.8);
 	margin: 0;
 	padding: 0;
 	background-color: black;
@@ -38,6 +39,7 @@ img {
 .shrink {
 	width: 0px;
 	max-width: 0px;
+	flex-wrap: nowrap;
 	overflow: hidden;
 }
 .overflow {
@@ -46,8 +48,11 @@ img {
 .wrapper {
 	padding: 10px;
 }
-.views {
+.rewidth {
 	width: auto;
+}
+.views {
+	min-height: 97%;
 	max-height: 97%;
 }
 .normal-view {
@@ -62,33 +67,52 @@ img {
 	min-width: 330px;
 }
 .place-mid {
-	transition: all 1s ease;
+	transition: all 0.5s ease;
 	left: 40%;
 	right: 40%;
 }
 .place-right {
-	transition: all 1s ease;
+	transition: all 0.5s ease;
 	left: 80%;
 	right: 0;
 }
 .place-left {
-	transition: all 1s ease;
+	transition: all 0.5s ease;
 	right: 80%;
 	left: 0;
 }
-#big-wrapper {
-	max-height: 100%;
-}
 .fa {
 	color: rgba(0,0,0,0.8);
+}
+#welcome {
+	display: flex;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 1;
+	justify-content: center;
+	align-content: center;
+	background-color: black;
+	transition: all 1s ease;
+}
+#wctext {
+	padding: 30px;
+	color: white;
+	opacity: 0;
+	margin: auto;
+	transition: all 2s ease;
+}
+#big-wrapper {
+	max-height: 100%;
 }
 #left, #middle, #right {
 	position: fixed;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	transition: all 3s ease-out;
-	height: 100%;
+	transition: all 1s ease;
 }
 #left > *, #middle > *,  #right > * {
 	margin: auto;
@@ -145,20 +169,20 @@ img {
 	color: #d3d3d3;
 	outline: none;
 	opacity: 1;
-	transition: all 1s ease;
+	transition: all 0.5s ease;
 }
 #aboutme-btn {
 	align-self: flex-start;
 	border: 1px solid #e6e6e6;
 	border-right-width: 3px;
 	border-left-width: 0px;
-	transition: all 0.5s ease;
+	transition: all 1s ease;
 }
 #works-btn {
 	border: 1px solid #e6e6e6;
 	border-left-width: 3px;
 	border-right-width: 0px;
-	transition: all 3s ease;
+	transition: all 1s ease;
 }
 #right {
     background-image: url("./img/right-bg.jpg");
