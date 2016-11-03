@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'junction_regularregular';
+    src: url('Junction-webfont.eot');
+    src: url('Junction-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Junction-webfont.woff') format('woff'),
+         url('Junction-webfont.ttf') format('truetype'),
+         url('Junction-webfont.svg#junction_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -12,10 +23,12 @@
     -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.5); 
 }
 html, body {
+	font-family: junction_regularregular;
 	margin: 0;
 	padding: 0;
 	background-color: black;
-	color: white;
+	transition: background-color 1s ease;
+	color: rgba(255,255,255,0.8);
 }
 img {
 	width: 90%;
@@ -23,6 +36,7 @@ img {
 	height: auto;
 }
 .shrink {
+	width: 0px;
 	max-width: 0px;
 	overflow: hidden;
 }
@@ -37,64 +51,120 @@ img {
 	max-height: 97%;
 }
 .normal-view {
-	max-width: 40%;
+	width: 38%;
+	max-width: 38%;
 }
 .large-view {
-	max-width: 80%;
+	width: 77%;
+	max-width: 77%;
+}
+.no-squish {
+	min-width: 330px;
 }
 .place-mid {
-	transition: all 1s linear;
+	transition: all 1s ease;
 	left: 40%;
 	right: 40%;
 }
 .place-right {
-	transition: all 1s linear;
+	transition: all 1s ease;
 	left: 80%;
 	right: 0;
 }
 .place-left {
-	transition: all 1s linear;
-	left: 0;
+	transition: all 1s ease;
 	right: 80%;
+	left: 0;
 }
 #big-wrapper {
 	max-height: 100%;
+}
+.fa {
+	color: rgba(0,0,0,0.8);
 }
 #left, #middle, #right {
 	position: fixed;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	transition: all 1s linear;
+	transition: all 3s ease-out;
+	height: 100%;
 }
 #left > *, #middle > *,  #right > * {
 	margin: auto;
 	width: auto;
 }
 #left {
+    background-image: url("./img/left-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 	left: 0;
+}
+#kenneth {
+	min-width: 300px;
+	border-radius: 50%;
+}
+#left-aboutme {
+	margin: auto;
+	width: 100%;
+}
+#left-aboutme > p {
+	margin: auto;
+	max-width: 600px;
+}
+#left-contactme {
+	margin: auto;
+	text-align: center;
+	font-size: 3em;
 }
 #middle {
 	width: 20%;
-	padding: 30px;
+	padding: 30px 0 30px 0;
 }
 #middle > * {
-	margin: 20px auto 20px auto;
 }
-#middle > button {
-	width: 100px;
-	font-size: 1em;
+#logo-btn {
+	margin: 20px auto 20px auto;
 }
 #logo-btn:hover {
 	cursor: default;
 }
+#btn-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+}
+#middle > div > button {
+	margin: 10px auto 10px auto;
+	padding: 10px;
+	width: 100px;
+	font-size: 1em;
+	background-color: transparent;
+	color: #d3d3d3;
+	outline: none;
+	opacity: 1;
+	transition: all 1s ease;
+}
 #aboutme-btn {
-
+	align-self: flex-start;
+	border: 1px solid #e6e6e6;
+	border-right-width: 3px;
+	border-left-width: 0px;
+	transition: all 0.5s ease;
 }
 #works-btn {
-
+	border: 1px solid #e6e6e6;
+	border-left-width: 3px;
+	border-right-width: 0px;
+	transition: all 3s ease;
 }
 #right {
+    background-image: url("./img/right-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 	right: 0;
 }
 #works {
