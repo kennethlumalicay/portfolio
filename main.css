@@ -25,7 +25,6 @@
 html, body {
 	-webkit-font-smoothing: antialiased;
 	font-family: junction_regularregular;
-	text-shadow: -1px 1px 3px rgba(0,0,0,0.8);
 	margin: 0;
 	padding: 0;
 	background-color: black;
@@ -166,14 +165,14 @@ img {
 	max-width: 600px;
 }
 #left-aboutme > div {
-	text-shadow: none;
-	background-color: rgba(255,255,255, 0.8);
+	background-color: rgba(0,0,0, 0.8);
 	margin: 0 auto 10px auto;
 	padding: 3px;
 	text-align: center;
 }
 #left-aboutme > p {
 	padding: 10px;
+	color: rgba(0,0,0,0.8);
 }
 #left-aboutme > div > * > span {
     background-image: url("./img/left-bg.jpg");
@@ -202,7 +201,7 @@ img {
 	font-size: 3em;
 }
 .fa {
-	color: rgba(255,255,255,0.8);
+	color: rgba(0,0,0,0.8);
 }
 #middle {
 	width: 20%;
@@ -231,7 +230,6 @@ img {
 	background-color: transparent;
 	color: #d3d3d3;
 	outline: none;
-	opacity: 1;
 	transition: all 1s ease;
 }
 #aboutme-btn {
@@ -255,7 +253,9 @@ img {
 	right: 0;
 }
 #right > h1 {
+	color: rgba(122,122,122,0.8);
 	font-size: 1.4em;
+	font-weight: normal;
 	margin: 10px auto 0 auto;
 }
 #works {
