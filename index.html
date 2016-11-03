@@ -5,6 +5,7 @@
         <title>PORTFOLIO</title>
         <meta name="description" content="Kenneth Lu Malicay">
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -18,31 +19,35 @@
     <body>
     <div id="big-wrapper">
         <div id="left" class="wrapper overflow views normal-view">
-            <img src="./img/pic.png" alt="pic">
-            <p>
-                Ut sed pretium enim. Ut interdum, ipsum nec mollis pellentesque, erat mi scelerisque leo,
-                quis ullamcorper diam ex eu dolor. Donec id turpis ac sapien consequat semper. Fusce a
-                arcu eget ex aliquet ornare. Integer vitae quam erat. Donec id diam nibh. Donec ut lobortis
-                eros. Donec efficitur velit nisl, sed mattis enim accumsan sed. Morbi non felis viverra,
-                dignissim ante et, pellentesque magna. Nunc mollis dictum accumsan. Vestibulum fermentum
-                erat sit amet egestas auctor. Maecenas finibus non sapien ut cursus. In condimentum enim
-                at feugiat posuere. Integer in justo vitae lorem scelerisque iaculis pellentesque vitae
-                nisi. Mauris id luctus tortor, eu elementum mauris.
-            </p>
-            <div>
-                <a href="#">facebook</a>
-                <a href="#">twitter</a>
-                <a href="#">linkedin</a>
+            <img id="kenneth" src="./img/pic.png" alt="pic">
+            <div class="no-squish" id="left-aboutme">
+                <p>
+                    Ut sed pretium enim. Ut interdum, ipsum nec mollis pellentesque, erat mi scelerisque leo,
+                    quis ullamcorper diam ex eu dolor. Donec id turpis ac sapien consequat semper. Fusce a
+                    arcu eget ex aliquet ornare. Integer vitae quam erat. Donec id diam nibh. Donec ut lobortis
+                    eros. Donec efficitur velit nisl, sed mattis enim accumsan sed. Morbi non felis viverra,
+                    dignissim ante et, pellentesque magna. Nunc mollis dictum accumsan. Vestibulum fermentum
+                    erat sit amet egestas auctor. Maecenas finibus non sapien ut cursus. In condimentum enim
+                    at feugiat posuere. Integer in justo vitae lorem scelerisque iaculis pellentesque vitae
+                    nisi. Mauris id luctus tortor, eu elementum mauris.
+                </p>
+            </div>
+            <div class="no-squish" id="left-contactme">
+                <a href="https://www.facebook.com/nethoinkz"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a href="https://www.twitter.com/nethoinkz"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/kenneth-malicay-a6b07012b?trk=nav_responsive_tab_profile_pic"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
             </div>
         </div>
         <div id="middle" class="wrapper place-mid">
-            <a href="#" id="logo-btn"><img src="./img/logo2-grey.png" alt="logo"></a>
+            <a href="#" id="logo-btn"><img id="logo" src="./img/logo2-grey.png" alt="logo"></a>
+            <div id="btn-container">
             <button id="aboutme-btn">About me</button>
             <button id="works-btn">Works</button>
+            </div>
         </div>
         <div id="right" class="wrapper overflow views normal-view">
             <h1>Works</h1>
-            <div id="works">
+            <div class="no-squish" id="works">
                 <img src="./img/sample1.png" alt="sample">
                 <img src="./img/sample2.png" alt="sample">
                 <img src="./img/sample3.png" alt="sample">
