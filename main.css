@@ -81,6 +81,7 @@ img {
 }
 .overflow {
 	overflow-y: auto;
+	overflow-x: hidden;
 }
 .wrapper {
 	padding: 0px;
@@ -170,6 +171,13 @@ img {
 	padding: 3px;
 	text-align: center;
 }
+#left-aboutme > div > *{
+	transition: all 0.5s ease;
+}
+#left-aboutme > div:hover > *{
+	transform: scale(1.05,1.05);
+	letter-spacing: 2px;
+}
 #left-aboutme > p {
 	padding: 10px;
 	color: rgba(0,0,0,0.8);
@@ -202,6 +210,17 @@ img {
 }
 .fa {
 	color: rgba(0,0,0,0.8);
+	transition: all 0.5s;
+}
+.fa:hover {
+	color: white;
+}
+#left-contactme > * {
+	transition: all 1s;
+}
+#left-contactme > *:hover {
+	transition: all 1s;
+  	transform: scale(1.02, 1.1);
 }
 #middle {
 	width: 20%;
@@ -210,11 +229,20 @@ img {
 #middle > * {
 }
 #logo-btn {
+	cursor: default;
 	text-align: center;
 	margin: 20px auto 20px auto;
+	border: none;
+	transition: all 0.6s;
 }
 #logo-btn:hover {
-	cursor: default;
+	animation-timing-function: step-start;
+	animation: logobtnloop 2s linear 0s infinite ;
+}
+@keyframes logobtnloop {
+    25%  {transform: rotate(5deg);}
+    75% {transform: rotate(-5deg);}
+    100% {transform: rotate(0deg);}
 }
 #btn-container {
 	width: 100%;
@@ -230,20 +258,24 @@ img {
 	background-color: transparent;
 	color: #d3d3d3;
 	outline: none;
-	transition: all 1s ease;
+	transition: all 0.5s ease, border 0.3s ease, transform 0.4s, width 0.8s;
 }
 #aboutme-btn {
 	align-self: flex-start;
 	border: 1px solid #e6e6e6;
 	border-right-width: 3px;
 	border-left-width: 0px;
-	transition: all 0.5s ease;
+}
+#aboutme-btn:hover {
+	width: 90%;
 }
 #works-btn {
 	border: 1px solid #e6e6e6;
 	border-left-width: 3px;
 	border-right-width: 0px;
-	transition: all 0.5s ease;
+}
+#works-btn:hover {
+	width: 90%;
 }
 #right {
     background-image: url("./img/right-bg.jpg");
