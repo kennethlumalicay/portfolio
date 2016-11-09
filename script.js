@@ -24,6 +24,11 @@ $(document).ready(function () {
 		welcome.addClass("nodisplay").removeClass("flex");
 	}, 3500);
 
+	// close warning
+	$("#closewarn").on("click", function() {
+		$("#warning").removeClass("flex").addClass("nodisplay");
+	});
+
 	function click(btn) {
 		var shrink = (btn == aboutmebtn ? right : left);
 		var grow = (btn == aboutmebtn ? left : right);
