@@ -120,6 +120,30 @@ img:hover {
 	right: 80%;
 	left: 0;
 }
+#warning {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	justify-content: center;
+	align-content: center;
+	background-color: rgba(0,0,0,0.3);
+	color: rgba(255,0,0,0.8);
+	font-size: 0.7em;
+	font-style: italic;
+	margin: 0;
+	padding: 2px 0 2px 0;
+}
+#closewarn {
+	margin: auto 0 auto 5px;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	font-size: 0.7em;
+	font-weight: bold;
+	color: rgba(255,0,0,0.9);
+}
 #welcome {
 	position: fixed;
 	justify-content: center;
@@ -303,6 +327,7 @@ img:hover {
 	flex-wrap: wrap;
 	justify-content: center;
 	overflow-y: scroll;
+	overflow-x: hidden;
 }
 #works > img {
 	height: 220px;
