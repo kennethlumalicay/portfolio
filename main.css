@@ -200,6 +200,7 @@ img:hover {
 	padding: 3px;
 	text-align: center;
 }
+/*
 #left-aboutme > div > *{
 	transition: all 0.5s ease;
 }
@@ -207,6 +208,7 @@ img:hover {
 	transform: scale(1.05,1.05);
 	letter-spacing: 2px;
 }
+*/
 #left-aboutme > p {
 	text-align: center;
 	text-shadow: 0px 0px 3px rgba(0,0,0,0.3);
