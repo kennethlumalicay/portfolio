@@ -26,7 +26,7 @@ $(document).ready(function () {
 
 	// close warning
 	$("#closewarn").on("click", function() {
-		$("#warning").removeClass("flex").addClass("nodisplay");
+		$("#warning").removeClass("flexwarn").addClass("nodisplay");
 	});
 
 	function click(btn) {
