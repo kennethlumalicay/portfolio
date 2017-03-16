@@ -46,6 +46,9 @@ img:hover {
 .nodisplay {
 	display: none;
 }
+.flexwarn {
+	display: flex;
+}
 .closewelcome {
 	opacity: 0;
 	top: 50%;
@@ -119,6 +122,11 @@ img:hover {
 .place-left {
 	right: 80%;
 	left: 0;
+}
+@media screen and ((min-width: 800px) and (min-height: 800px)) {
+	#warning {
+		display: none;
+	}
 }
 #warning {
 	position: fixed;
