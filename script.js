@@ -10,6 +10,8 @@ $(document).ready(function () {
 	var logo = $("#logo");
 	var logobtn = $("#logo-btn");
 	var body = $("body");
+	var worksLink = $("#works > a");
+	var workHover = $("#works > a > div");
 
 	// welcome display
 	function welcomedp() {
@@ -63,5 +65,12 @@ $(document).ready(function () {
 		logo.removeClass("invert");
 		worksbtn.removeClass("invert fade").addClass("seen").prop("disabled", false);
 		aboutmebtn.removeClass("invert fade").addClass("seen").prop("disabled", false);
+	});
+
+	// hover on works
+	worksLink.mouseenter(function() {
+		$(this).children(".wh-hide").removeClass("wh-hide").addClass("wh-show");
+	}).mouseleave(function() {
+		$(this).children(".wh-show").removeClass("wh-show").addClass("wh-hide");
 	});
 });
