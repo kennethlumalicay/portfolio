@@ -365,8 +365,8 @@ img:hover {
 	max-width: 400px;
 	width: 90%;
 	margin: 5px;
-	border: solid 2px rgba(0,0,0,0.7);
-	border-radius: 2px;
+	border-top: solid 1em rgba(0,0,0,1);
+	border-radius: 5px;
 }
 #works > a > div {
 	display: flex;
@@ -380,9 +380,8 @@ img:hover {
 }
 .wh-show {
 	color: rgba(255,255,255,1);
-	transform: translateY(-40px);
-	background-color: rgba(0,0,0,0.6);
-	text-shadow: 2px 2px 4px rgba(0,0,0,1);
+	transform: translateY(-100px);
+	text-shadow: -1px 0 15px rgba(100,100,100,0.8), 0 1px 15px rgba(100,100,100,0.8), 1px 0 15px rgba(100,100,100,0.8), 0 -1px 15px rgba(100,100,100,0.8);
 }
 .wh-hide {
 	color: rgba(255,255,255,0.0);
