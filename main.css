@@ -37,10 +37,10 @@ img {
 	max-width: 310px;
 	height: auto;
 	transition: all 0.6s ease;
-}
+}/*
 img:hover {
 	transform: scale(1.02, 1.02);
-}
+}*/
 .bodybg {
 	background-color: #e6e6e6;
 }
@@ -194,6 +194,9 @@ img:hover {
 	/*min-width: 300px;*/
 	border-radius: 50%;
 }
+#kenneth:hover {
+	transform: scale(1.02, 1.02);
+}
 #left-aboutme {
 	margin: 2px;
 	width: 100%;
@@ -279,6 +282,7 @@ img:hover {
 #logo-btn:hover {
 	animation-timing-function: step-start;
 	animation: logobtnloop 1.4s linear 0s infinite ;
+	transform: scale(1.02, 1.02);
 }
 @keyframes logobtnloop {
     50%  {filter: invert(100%);}
@@ -339,10 +343,50 @@ img:hover {
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
-#works > img {
+#works > a {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: rgba(255,255,255,0.8);
+	outline: 0;
+	text-decoration: none;
+	font-weight: 900;
+	opacity: 0.7;
+	transition: all 0.5s;
+}
+#works > a:hover {
+	opacity: 1;
+	transform: scale(1.02, 1.02);
+}
+#works > a > img {
 	height: auto;
-	max-height: 50%;
-	max-width: 100%;
-	width: auto;
+	max-height: auto;
+	max-width: 400px;
+	width: 90%;
 	margin: 5px;
+	border: solid 2px rgba(0,0,0,0.7);
+	border-radius: 2px;
+}
+#works > a > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 25px;
+	height: 0px;
+	width: 0px;
+	transition: all 0.2s;
+}
+.wh-show {
+	color: rgba(255,255,255,1);
+	transform: translateY(-40px);
+	background-color: rgba(0,0,0,0.6);
+	text-shadow: 2px 2px 4px rgba(0,0,0,1);
+}
+.wh-hide {
+	color: rgba(255,255,255,0.0);
+	transform: translateY(0);
+	display: none;
+	text-shadow: 1px 1px 5px rgba(0,0,0,0);
 }
