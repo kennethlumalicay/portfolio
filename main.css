@@ -362,7 +362,7 @@ img:hover {
 #works > a > img {
 	height: auto;
 	max-height: auto;
-	max-width: 250px;
+	max-width: 20em;
 	width: 90%;
 	margin: 5px;
 	border-top: solid 0.5em rgba(0,0,0,1);
