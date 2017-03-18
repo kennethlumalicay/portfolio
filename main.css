@@ -188,6 +188,8 @@ img:hover {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    justify-content: space-around;
+    align-items: space-around;
 	left: 0;
 }
 #kenneth {
@@ -198,16 +200,24 @@ img:hover {
 	transform: scale(1.02, 1.02);
 }
 #left-aboutme {
-	margin: 2px;
+	margin: auto;
 	width: 100%;
+	max-height: 25em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-content: center;
+	flex-grow: 1;
 }
 #left-aboutme > * {
 	margin: auto;
-	max-width: 600px;
+	max-width: 680px;
 }
 #left-aboutme > div {
 	background-color: rgba(0,0,0, 0.8);
-	margin: 0 auto 10px auto;
+	margin: auto;
+	width: 80%;
+	max-width: 680px;
 	padding: 3px;
 	text-align: center;
 }
@@ -220,12 +230,14 @@ img:hover {
 	letter-spacing: 2px;
 }
 */
-#left-aboutme > p {
-	text-align: center;
+#left-aboutme > p {/*
+	text-align: center;*/
+	text-align: left;
+	text-indent: 50px;
 	font-weight: 900;
 	text-shadow: 0 -1px 0px rgba(0,0,0,0.5);/*, 0 1px 0px rgba(100,100,100,0.4),
 		1px 0 0px rgba(100,100,100,0.4), 0 -1px 0px rgba(100,100,100,0.4);*/
-	padding: 10px;
+	padding: 2px;
 	color: rgba(0,0,0,0.9);
 }
 #left-aboutme > div > * > span {
@@ -238,12 +250,12 @@ img:hover {
 }
 #left-aboutme > div > h3 {
 	margin: 0;
-	font-size: 2em;
+	font-size: 1.6em;
 	font-weight: bold;
 	color: rgba(255,255,255, 0.7);
 }
 #left-aboutme > div > h4 {
-	margin: 0 auto 0 auto;
+	margin: auto;
 	font-size: 1.2em;
 	font-weight: normal;
 	color: rgba(255,255,255, 0.6);
@@ -252,7 +264,7 @@ img:hover {
 #left-contactme {
 	margin: auto;
 	text-align: center;
-	font-size: 3em;
+	font-size: 2.5em;
 }
 .fa {
 	color: rgba(0,0,0,0.8);
@@ -267,6 +279,14 @@ img:hover {
 #left-contactme > *:hover {
 	transition: all 1s;
   	transform: scale(1.02, 1.1);
+}
+#left-contactme > div {
+	font-size: 0.4em;
+	color: rgba(0,0,0,0.9);
+	text-align: center;
+	font-weight: 900;
+	text-shadow: 0 -1px 0px rgba(0,0,0,0.5);/*, 0 1px 0px rgba(100,100,100,0.4),
+		1px 0 0px rgba(100,100,100,0.4), 0 -1px 0px rgba(100,100,100,0.4);*/
 }
 #middle {
 	width: 20%;
