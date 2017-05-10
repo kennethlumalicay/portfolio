@@ -180,7 +180,7 @@ img:hover {
 	-webkit-transform: translate3d(0, 0, 0);
 }
 #left > *, #middle > *,  #right > * {
-	margin: auto;
+	margin: 0 auto 0 auto;
 	/*width: auto;*/
 }
 #left {
@@ -188,8 +188,8 @@ img:hover {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    justify-content: space-around;
-    align-items: space-around;
+    justify-content: center;
+    align-items: center;
 	left: 0;
 }
 #kenneth {
@@ -200,7 +200,6 @@ img:hover {
 	transform: scale(1.02, 1.02);
 }
 #left-aboutme {
-	margin: auto;
 	width: 100%;
 	max-height: 25em;
 	display: flex;
@@ -262,7 +261,6 @@ img:hover {
 }
 
 #left-contactme {
-	margin: auto;
 	text-align: center;
 	font-size: 2.5em;
 }
@@ -290,6 +288,7 @@ img:hover {
 }
 #middle {
 	width: 20%;
+	height: 100%;
 	padding: 30px 0 30px 0;
 }
 #middle > * {
