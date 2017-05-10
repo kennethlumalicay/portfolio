@@ -315,12 +315,11 @@ img:hover {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	margin-top: 20px;
 }
 #middle > div > button {
 	margin: 10px auto 10px auto;
 	padding: 10px;
-	width: 100px;
+	width: 60%;
 	font-size: 1em;
 	background-color: transparent;
 	color: #d3d3d3;
